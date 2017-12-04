@@ -8,11 +8,80 @@
 </head>
 
 <body>
-    <section>
+    <section class="landing">
+        <i class="fa fa-arrow-down fa-3x" aria-hidden="true"></i>
     </section>
-        <div class="main">
-        <div class="compartement"></div>
+    <main class="">
+        <div class="compartement">
+            <h1>Shows</h1>
+            <h2>Yo, Check out my shows coming up!</h2>
+            <div class="shows_container">
+            </div>
         </div>
+        <div class="compartement">
+            <h1>About</h1>
+            <h2>If you want to know me personally ;p</h2>
+            <div class="about_container">
+                <img id="about_img" src="media/skinny_bg.jpg">
+                <p id="about_description">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un peintre anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.</p>
+            </div>
+        </div>
+        <div class="compartement">
+            <h1>News</h1>
+            <h2>All my new stuff coming up</h2>
+            <div class="news_container">
+            </div>
+        </div>
+        <div class="compartement">
+            <h1>Videos</h1>
+            <h2>God knows that I'm photogenic</h2>
+            <div class="video_container">
+            </div>
+        </div>
+        <div class="compartement">
+            <h1>Book Me</h1>
+            <h2>Fill out the form if you want me to play in your venue !</h2>
+        </div>
+    </main>
+
+    <template id="showsTemplate">
+            <div class="single_show_wrapper">
+                <span id="show_date"></span>
+                <span id="show_location"></span>
+                <a href="" id="show_ticket_link" target="_blank">Tickets</a>
+            </div>
+    </template>
+
+    <template id="newsTemplate">
+            <a id="id_news_post" href="">
+                <div class="single_news_wrapper">
+                    <span id="news_date"></span>
+                    <span id="news_title"></span>
+                </div>
+            </a>
+    </template>
+
+    <template id="videoTemplate">
+        <a id="video_id" href="">
+            <div class="video_img">
+                <h5 id="video_title"></h5>
+            </div>
+        </a>
+    </template>
+
+    <div id="myModal" class="modal">
+
+      <div class="modal-content">
+            <span class="close">&times;</span>
+            <span id="news_date_modal"></span>
+            <span id="news_title_modal"></span>
+            <img id="news_modal_img"src="">
+            <p id="news_p"></p>
+            <iframe id="video_modal" width="100%" max-height="100%"
+            src="">
+        </iframe>
+      </div>
+
 
     <script src="https://use.fontawesome.com/cfb128ec89.js"></script>
     <script src="main.js"></script>
