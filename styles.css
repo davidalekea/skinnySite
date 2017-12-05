@@ -6,20 +6,46 @@ html {
     width: 100vw;
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
+    font-family: HelveticaNeue;
+    color: white;
+
+}
+
+h1 {
+    font-family: Beba;
+    text-align: center;
+    font-size: 60px;
+    font-weight: lighter;
+}
+h2 {
+
+    width: 70vw;
+    margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Beba';
+  src: url('fonts/BEBAS.ttf'); /* IE9 Compat Modes */
+  src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+       url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
 section {
     height: 100vh;
     width: 100vw;
-    border: 1px solid black;
+
 }
 
-main {
-    background-image: url(converted-2.png);
-}
+
 
 .compartement {
     height: 100vh;
+    padding-top: 50px;
+    border: 1px solid black;
 }
 
 
@@ -90,37 +116,92 @@ main {
 /* LANDING */
 
 .landing {
-    background-image: url(media/skinny_bg.jpg);
-}
+    text-align: center;
 
+}
+.parallax-container {
+    height: 100vw;
+}
+video{
+    position: absolute;
+    min-width: 100%;
+    min-height: 100%;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    -webkit-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
+    -moz-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
+    transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
+    z-index: -99
+}
 .fa-arrow-down {
-    color: yellow;
-}
+    color: #F9C700;
+    position: relative;
+    top: 85%;
 
+}
 
 /* SHOWS */
+.shows_container {
+    padding-top: 30px;
+    width: 60vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-row-gap: 30px;
+    text-align: center;
+}
 
+.single_show_wrapper {
+    border: 2px #F9C700 solid;
+    padding: 15px;
 
+}
+#show_ticket_link {
+  border-radius: 10px;
+  font-family: Beba;
+  color: #000000;
+  font-size: 20px;
+  background: #F9C700;
+  padding: 10px 20px 10px 20px;
+  width: 65px;
+  max-height: 20px;
+  text-decoration: none;
+  margin: 0 auto;
+}
 /* ABOUT */
 
-#about_img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+.about_container {
+    display: grid;
 }
+
 
 
 /* NEWS */
+.news_container {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+}
+
 
 .single_news_wrapper {
     background-size: cover;
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 250px;
 }
 
 
 /* VIDEOS */
-
+.video_container {
+    display: flex;
+}
+.video_img {
+    height: 200px;
+    width: 200px;
+    background-size: cover;
+}
 
 /* BOOKME */
 
