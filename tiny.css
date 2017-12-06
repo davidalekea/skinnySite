@@ -3,6 +3,9 @@
     main {
     background-image: url(media/mobilebg.png);
 }
+    .extend {
+    height: auto;
+}
 /* MENU */
 
 
@@ -13,6 +16,9 @@
     background: url(media/Skinny_bg_mobile.jpg) no-repeat center center fixed;
     background-size: cover;
 }
+    video {
+        display: none;
+    }
 
 /*SHOWS*/
 
@@ -34,6 +40,10 @@
     text-align: center;
     padding-top: 40px;
 }
+
+/*NEWS*/
+
+
 /* VIDEOS */
 
 
@@ -43,4 +53,3 @@
 /* SPOTIFY */
 
 
-}

@@ -45,7 +45,22 @@ section {
 .compartement {
     height: 100vh;
     padding-top: 50px;
-    border: 1px solid black;
+
+}
+
+span {
+    text-decoration: none;
+    color: #EFEFEF;
+
+}
+
+#spotify_player {
+    position: fixed;
+    bottom: 0;
+
+}
+#spotify_player_mobile {
+    display: none;
 }
 
 
@@ -126,20 +141,29 @@ video{
     position: absolute;
     min-width: 100%;
     min-height: 100%;
-    top: 50%;
+    top: 0%;
     left: 50%;
     width: auto;
-    height: auto;
+    height: 100vh;
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
     -moz-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
     transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
-    z-index: -99
+    z-index: -99;
+}
+.svg_container {
+    height: 70vh;
+    width: 90vw;
+    margin: 0 auto;
+    margin-top: 4vh;
 }
 .fa-arrow-down {
     color: #F9C700;
-    position: relative;
-    top: 85%;
+    margin-top: 20vh;
+    max-height: 20px;
+}
 
+.fa-arrow-down:hover {
+    cursor: pointer;
 }
 
 /* SHOWS */
@@ -177,31 +201,74 @@ video{
 }
 
 
-
 /* NEWS */
 .news_container {
-    display: flex;
-    margin: auto;
-    flex-direction: row;
+    width: 80vw;
+    margin: 0 auto;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 40px;
+
 }
 
 
 .single_news_wrapper {
     background-size: cover;
-    height: 150px;
-    width: 250px;
+    height: 23vh;
+    width: 19vw;
+    margin: 20px;
+    background-blend-mode: darken;
+    display: grid;
+
 }
 
+.single_news_wrapper span {
+    font-size: 20px;
+}
+@media screen and (max-width:600px ) {
+    .news_container {
+        display: flex;
+        width: 80vw;
+        flex-direction: column;
+    }
+    .single_news_wrapper {
+        width: 60vw;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:1000px ) {
+    .news_container {
+        grid-template-columns: auto auto ;
+    }
+    .single_news_wrapper {
+        width: 30vw;
+    }
+}
 
 /* VIDEOS */
 .video_container {
-    display: flex;
+    display: grid;
+    width: 100vw;
+    grid-template-columns: auto auto;
 }
 .video_img {
-    height: 200px;
-    width: 200px;
+    height: 20vh;
+    width: 40vw;
     background-size: cover;
 }
+
+@media screen and (max-width:800px ) {
+    .video_container {
+        grid-template-columns: auto;
+    }
+    .video_img {
+        width: 80vw;
+    }
+}
+
+
 
 /* BOOKME */
 

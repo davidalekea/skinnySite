@@ -1,4 +1,4 @@
-/* Fetch & Display New Shows Coming Up */
+/* Fetch & Display Shows,News, Videos Coming Up */
 
 function getShows() {
     fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/shows?_embed")
@@ -45,20 +45,18 @@ function getSingleVideosById(myId) {
 
 function deployShows(json) {
     json.forEach(displayShows);
-    console.log(json);
 }
 
 function deployNews(json) {
     json.forEach(displayNews);
-    console.log(json);
 }
 
 function deployVideos(json) {
     json.forEach(displayVideos);
-    console.log(json);
 }
 
 function displayShows(singleShow) {
+
     let showsContainer = document.querySelector(".shows_container");
     let showTemplate = document.querySelector("#showsTemplate").content;
 
@@ -87,9 +85,9 @@ function displayNews(singleNews) {
 };
 
 function displayVideos(singleVideos) {
+    console.log(singleVideos);
     let videoContainer = document.querySelector(".video_container");
     let videoTemplate = document.querySelector("#videoTemplate").content;
-
     let videoClone = videoTemplate.cloneNode(true);
     videoClone.querySelector("#video_id").href = "?id=" + singleVideos.id;
     var fade = "url('')";
@@ -106,7 +104,8 @@ getNews();
 getVideos();
 
 function openNewsModal(uniqueId) {
-    console.log(uniqueId);
+    console.log(uniqueId.acf.date);
+
     document.getElementById('myModal').style.display = "block";
     document.querySelector("#news_date_modal").textContent = uniqueId.acf.date;
     document.querySelector("#news_title_modal").textContent = uniqueId.title.rendered;
@@ -134,6 +133,8 @@ if (id) {
     getSingleNewsById(id);
     getSingleVideosById(id);
 }
+
+/* TRIGGER MODAL */
 
 document.querySelector(".close").addEventListener("click", function () {
     document.getElementById('myModal').style.display = "none";

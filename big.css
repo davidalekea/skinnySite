@@ -2,6 +2,7 @@
 /* GENERAL */
     main {
     background-image: url(media/desktopbg.png);
+    background-size: cover;
 }
 /* MENU */
 

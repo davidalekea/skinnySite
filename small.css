@@ -2,6 +2,7 @@
 /* GENERAL */
     main {
     background-image: url(media/tabletbg.png);
+
 }
 /* MENU */
 
@@ -35,11 +36,6 @@
 
 /* NEWS */
 
-.news_container {
-    display: flex;
-    margin: auto;
-    flex-direction: column;
-}
 
 /* VIDEOS */
 
@@ -60,8 +56,4 @@
         height: 45vw;
     }
 }
-@media screen and (max-height:730px) {
-    .shows {
-        margin-bottom: 130px;
-    }
-}
+
