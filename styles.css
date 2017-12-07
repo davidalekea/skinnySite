@@ -57,6 +57,7 @@ span {
 #spotify_player {
     position: fixed;
     bottom: 0;
+    display: none;
 
 }
 #spotify_player_mobile {
