@@ -15,6 +15,7 @@ html {
 
 h1 {
     font-family: Beba;
+    letter-spacing: 0.3px;
     text-align: center;
     font-size: 60px;
     font-weight: lighter;
@@ -217,17 +218,31 @@ video{
 
 
 .single_news_wrapper {
+
     background-size: cover;
-    height: 23vh;
-    width: 19vw;
+    height: 25vh;
+    width: 21vw;
     margin: 20px;
     background-blend-mode: darken;
-    display: grid;
+
+
 
 }
 
-.single_news_wrapper span {
+.wrapper_text_news {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 68%;
+}
+
+.single_news_wrapper span  {
     font-size: 20px;
+    font-family: BEBA;
+    font-weight: lighter;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+
 }
 @media screen and (max-width:600px ) {
     .news_container {
@@ -256,9 +271,29 @@ video{
     grid-template-columns: auto auto;
 }
 .video_img {
-    height: 20vh;
+    margin: 0 auto;
+    height: 30vh;
     width: 40vw;
     background-size: cover;
+    background-position: center;
+
+}
+
+#video_title  {
+    display: block;
+    color: white;
+    font-size: 20px;
+    font-family: BEBA;
+    font-weight: lighter;
+    letter-spacing: 0.3px;
+    text-decoration: none;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    text-align: center;
+}
+#video_id {
+    text-decoration: none;
 }
 
 @media screen and (max-width:800px ) {

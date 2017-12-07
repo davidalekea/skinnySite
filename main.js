@@ -94,7 +94,7 @@ function displayVideos(singleVideos) {
     let urlRaw = singleVideos.better_featured_image.media_details.sizes.thumbnail.source_url;
     let urlNew = fade.slice(0, 5) + urlRaw + fade.slice(5);
     videoClone.querySelector(".video_img").style.backgroundImage = urlNew;
-    videoClone.querySelector("#video_title").textContent = singleVideos.title.rendered;
+    videoClone.querySelector("#video_title").innerHTML = singleVideos.title.rendered;
 
     videoContainer.appendChild(videoClone);
 
