@@ -1,0 +1,45 @@
+@media screen and (min-width:800px) {
+/* GENERAL */
+    main {
+    background-image: url(media/desktopbg.png);
+    background-size: cover;
+}
+/* MENU */
+
+
+/* MODAL */
+
+/* LANDING */
+
+
+/*SHOWS*/
+    .single_show_wrapper {
+        display: grid;
+        grid-template-columns: 15% auto 20%;
+    }
+/* ABOUT */
+    .about_container{
+        grid-template-columns: 50% 50%;
+    }
+    #about_description {
+        width: 40vw;
+        margin: 0 auto;
+        padding-top: 100px;
+        line-height: 1.8;
+
+    }
+    #about_img {
+        height: 330px;
+        position: relative;
+        left: 10%;
+    }
+/* VIDEOS */
+
+
+/* BOOKME */
+
+
+/* SPOTIFY */
+
+
+}
