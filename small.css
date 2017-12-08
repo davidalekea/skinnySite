@@ -8,7 +8,9 @@
     height: auto;
 }
 /* MENU */
-
+.desktopmenu{
+    display: none;
+}
 
 /* MODAL */
 

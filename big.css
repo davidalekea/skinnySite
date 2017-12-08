@@ -5,6 +5,60 @@
     background-size: cover;
 }
 /* MENU */
+.desktopmenu{
+    display: inline-flex;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(8, 9, 9, 0.8);
+    overflow: hidden;
+    height: 5em;
+}
+
+.desktopmenu ul{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.desktopmenu li{
+    display: inline-flex;
+    text-decoration: none;
+}
+
+.desktopmenu a{
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.menupoints {
+    font-family: 'BEBA';
+    margin-top: auto;
+    margin-bottom: auto;
+    }
+
+.menupoints li{
+    margin-right: 0.7em;
+}
+
+.menupoints a:hover{
+    text-decoration: underline;
+    text-decoration-color: #F9C700;
+}
+
+.socialicons {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.socialicons li{
+    margin-right: 1em;
+}
+
+.socialicons a:hover {
+    color: #F9C700;
+}
 
 
 /* MODAL */
