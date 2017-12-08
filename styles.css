@@ -108,7 +108,9 @@ span {
     text-align: center;
 
 }
-
+.news_trigger {
+    display: grid;
+}
 
 
 .close {
@@ -131,8 +133,9 @@ span {
 
 #news_title_modal  {
     font-family: BEBA;
-    font-size: 40px
+    font-size: 40px;
 }
+
 #news_modal_img {
     max-height: 200px;
     margin: 0 auto;
@@ -191,7 +194,7 @@ video{
 }
 
 .single_show_wrapper {
-    border: 2px #F9C700 solid;
+
     padding: 15px;
 
 }
@@ -406,4 +409,3 @@ input::placeholder, textarea::placeholder {
 }
 
 /* SPOTIFY */
-

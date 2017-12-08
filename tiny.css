@@ -13,7 +13,13 @@
 
 
 /* MODAL */
-
+#news_p {
+        width: 70vw;
+        font-size: 12px;
+    }
+    #news_modal_img {
+        max-height: 100px;
+    }
 /* LANDING */
     .landing {
 

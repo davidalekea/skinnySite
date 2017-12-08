@@ -11,7 +11,12 @@
 
 
 /* MODAL */
-
+    #news_p {
+        width: 70vw
+    }
+    #news_modal_img {
+        max-height: 250px;
+    }
 /* LANDING */
 
 /* SHOWS */

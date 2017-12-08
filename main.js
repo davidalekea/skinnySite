@@ -27,8 +27,6 @@ function getVideos() {
 
 function getSingleNewsById(myId) {
     console.log(myId);
-
-
         fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news/" + myId + "?_embed")
         .then(function (response) {
             return response.json()
@@ -80,7 +78,7 @@ function displayNews(singleNews) {
     let newsTemplate = document.querySelector("#newsTemplate").content;
 
     let newsClone = newsTemplate.cloneNode(true);
-    newsClone.querySelector("#id_news_post").href = "?id=" + singleNews.id;
+    newsClone.querySelector("#id_news_post").href = "?id=" + singleNews.id+ "/news";
     let dateRaw = singleNews.acf.date;
     let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
     newsClone.querySelector("#news_date").textContent = dateChar;
@@ -88,7 +86,7 @@ function displayNews(singleNews) {
     var fade = "url('')";
     let urlRaw = singleNews.better_featured_image.media_details.sizes.thumbnail.source_url;
     let urlNew = fade.slice(0, 5) + urlRaw + fade.slice(5);
-    newsClone.querySelector(".single_news_wrapper").style.backgroundImage = urlNew;
+  newsClone.querySelector(".single_news_wrapper").style.backgroundImage = urlNew;
     newsContainer.appendChild(newsClone);
 
 };
@@ -98,7 +96,7 @@ function displayVideos(singleVideos) {
     let videoContainer = document.querySelector(".video_container");
     let videoTemplate = document.querySelector("#videoTemplate").content;
     let videoClone = videoTemplate.cloneNode(true);
-    videoClone.querySelector("#video_id").href = "?id=" + singleVideos.id;
+    videoClone.querySelector("#video_id").href = "?id=" + singleVideos.id+ "/videos";
     var fade = "url('')";
     let urlRaw = singleVideos.better_featured_image.media_details.sizes.thumbnail.source_url;
     let urlNew = fade.slice(0, 5) + urlRaw + fade.slice(5);
@@ -113,7 +111,6 @@ getNews();
 getVideos();
 
 function openNewsModal(uniqueId) {
-    console.log(uniqueId.acf.date);
 
     document.getElementById('myModal').style.display = "block";
     let dateRaw = uniqueId.acf.date;
@@ -126,8 +123,21 @@ function openNewsModal(uniqueId) {
 }
 
 function openVideosModal(uniqueId) {
+    document.onreadystatechange = function () {
+  var state = document.readyState;
+  if (state == 'interactive') {
+      document.querySelector('#load').style.display = "block"; document.querySelector('#video_id').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.querySelector('video_id').style.visibility="visible";
+      },1000);
+  }
+}
     console.log(uniqueId);
     document.getElementById('myModal').style.display = "block";
+    document.querySelector(".news_trigger").style.display = "none";
     let videoElement = uniqueId.content.rendered;
     console.log(videoElement);
     var divVideo = document.createElement('div');
@@ -137,11 +147,17 @@ function openVideosModal(uniqueId) {
 }
 
 let searchParams = new URLSearchParams(window.location.search);
-let id = searchParams.get("id");
+let line = searchParams.toString("id");
+let id = line.slice(3,6);
+console.log(id);
 
-if (id) {
-    getSingleNewsById(id);
-    getSingleVideosById(id);
+if(window.location.href.indexOf("videos") > -1 && id) {
+       getSingleVideosById(id);
+}
+
+if(window.location.href.indexOf("news") > -1 && id) {
+       getSingleNewsById(id);
+
 }
 
 /* TRIGGER MODAL */
