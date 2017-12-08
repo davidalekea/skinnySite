@@ -6,6 +6,9 @@
     .extend {
     height: auto;
 }
+    .svg_container {
+        margin-top: 0;
+    }
 /* MENU */
 
 
@@ -14,7 +17,7 @@
 /* LANDING */
     .landing {
 
-    background: url(media/Skinny_bg_mobile.jpg) no-repeat center center fixed;
+    background: url(media/Skinny_bg_mobile.jpg) no-repeat  center fixed;
     background-size: cover;
 }
     video {

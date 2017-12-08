@@ -17,6 +17,7 @@ function getNews() {
 }
 
 function getVideos() {
+
     fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/videos?_embed")
         .then(function (response) {
             return response.json()
@@ -26,11 +27,15 @@ function getVideos() {
 
 function getSingleNewsById(myId) {
     console.log(myId);
-    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news/" + myId + "?_embed")
+
+
+        fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news/" + myId + "?_embed")
         .then(function (response) {
             return response.json()
         })
         .then(openNewsModal);
+
+
 }
 
 function getSingleVideosById(myId) {
@@ -61,7 +66,9 @@ function displayShows(singleShow) {
     let showTemplate = document.querySelector("#showsTemplate").content;
 
     let showClone = showTemplate.cloneNode(true);
-    showClone.querySelector("#show_date").textContent = singleShow.acf.date;
+    let dateRaw = singleShow.acf.date;
+    let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
+    showClone.querySelector("#show_date").textContent = dateChar;
     showClone.querySelector("#show_location").textContent = singleShow.acf.location;
     showClone.querySelector("#show_ticket_link").href = singleShow.acf.linktoticket;
     showsContainer.appendChild(showClone);
@@ -74,7 +81,9 @@ function displayNews(singleNews) {
 
     let newsClone = newsTemplate.cloneNode(true);
     newsClone.querySelector("#id_news_post").href = "?id=" + singleNews.id;
-    newsClone.querySelector("#news_date").textContent = singleNews.acf.date;
+    let dateRaw = singleNews.acf.date;
+    let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
+    newsClone.querySelector("#news_date").textContent = dateChar;
     newsClone.querySelector("#news_title").textContent = singleNews.title.rendered;
     var fade = "url('')";
     let urlRaw = singleNews.better_featured_image.media_details.sizes.thumbnail.source_url;
@@ -107,7 +116,9 @@ function openNewsModal(uniqueId) {
     console.log(uniqueId.acf.date);
 
     document.getElementById('myModal').style.display = "block";
-    document.querySelector("#news_date_modal").textContent = uniqueId.acf.date;
+    let dateRaw = uniqueId.acf.date;
+    let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
+    document.querySelector("#news_date_modal").textContent = dateChar;
     document.querySelector("#news_title_modal").textContent = uniqueId.title.rendered;
     document.querySelector("#news_p").innerHTML = uniqueId.content.rendered;
     document.querySelector("#news_modal_img").src = uniqueId.better_featured_image.media_details.sizes.large.source_url;
