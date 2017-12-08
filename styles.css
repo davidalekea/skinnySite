@@ -308,6 +308,11 @@ video{
 
 
 /* BOOKME */
+.bookme h2{
+    text-align: center;
+}
+
+
 form {
     display: block;
     box-sizing: border-box;
@@ -319,33 +324,38 @@ form {
   input, textarea {
       border:0;
       outline:0;
-      padding: 1em;
+      padding: 0.3em;
       border-radius: 8px;
       display: block;
       width: 70%;
       margin-top: 1em;
+      margin-bottom: 1em;
       margin-left: auto;
       margin-right: auto;
       font-family: 'BEBA', sans-serif;
+      font-size: 1.4em;
       box-shadow : 0 1px 1px rgba(black, 0.1);
 
     &:focus {
-       box-shadow: 0 0px 2px rgba($red, 1)!important);
+       box-shadow: rgba($red, 1)!important);
     }
   }
 
 input::placeholder, textarea::placeholder {
-    color: black;
-    font-size: 1.8em;
-    font-stretch: expanded;
+    color: #080909;
+
 
 }
 
   #input-submit {
-     color: white;
-     background: #e74c3c;
-     cursor: pointer;
-     width: 150px;
+      color: #080909;
+      font-size: 1.6em;
+      background: #F9C700;
+      cursor: pointer;
+      width: 150px;
+      padding-bottom: .4em;
+      padding-top: .4em;
+      border-radius: 15px;
 
     &:hover {
        @include box-shadow(0 1px 1px 1px rgba(#aaa, 0.6));
