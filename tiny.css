@@ -10,7 +10,9 @@
         margin-top: 0;
     }
 /* MENU */
-
+.desktopmenu{
+    display: none;
+}
 
 /* MODAL */
 #news_p {

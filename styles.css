@@ -67,7 +67,9 @@ span {
 
 
 /* MENU */
-
+.desktopmenu{
+    display: none;
+}
 
 /* MODAL */
 
