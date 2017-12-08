@@ -119,7 +119,6 @@ function openVideosModal(uniqueId) {
     document.getElementById('myModal').style.display = "block";
     let videoElement = uniqueId.content.rendered;
     console.log(videoElement);
-
     var divVideo = document.createElement('div');
     divVideo.innerHTML = videoElement;
     document.querySelector(".modal-content").appendChild(divVideo);
