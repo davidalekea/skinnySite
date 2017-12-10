@@ -1,9 +1,42 @@
-$("#spotify_player").hide(); // hide the fixed navbar initially
+/*$("#spotify_player").hide();
+$(".fa-spotify").hide();
 $(".fa-arrow-down").click(function() {
     $('html,body').animate({
         scrollTop: $(".shows").offset().top},
         'slow');
-    $("#spotify_player").show();
 });
 
 
+ document.body.addEventListener('scroll', function () {
+     var hT = $('.shows_container').offset().top,
+         hH = $('.shows_container').outerHeight(),
+         wH = $(window).height(),
+         wS = $(this).scrollTop();
+     if (wS > (hT + hH - wH)) {
+         $(".fa-spotify").show();
+     }
+ });
+*/
+//Init hide
+$(".fa-spotify").hide();
+$("#spotify_player").hide();
+
+
+ document.body.addEventListener('scroll', function () {
+     var hT = $('.fa-arrow-down').offset().top,
+         hH = $('.fa-arrow-down').outerHeight(),
+         wH = $(window).height(),
+         wS = $(this).scrollTop();
+     if (wS > (hT + hH - wH)) {
+         $("#logo").addClass("fadeOutUp");
+         $(".desktopmenu").removeClass("under");
+         $(".desktopmenu").addClass("ontop");
+         $(".fa-spotify").show();
+
+     }
+ });
+$(".fa-arrow-down").click(function() {
+    $('html,body').animate({
+        scrollTop: $(".shows").offset().top},
+        'slow');
+});

@@ -39,7 +39,6 @@ h2 {
 section {
     height: 100vh;
     width: 100vw;
-
 }
 
 
@@ -58,13 +57,19 @@ span {
 #spotify_player {
     position: fixed;
     bottom: 0;
-    display: none;
+
 
 }
 #spotify_player_mobile {
     display: none;
 }
 
+.under {
+    z-index: -3;
+}
+.ontop {
+    z-index: 3;
+}
 
 /* MENU */
 .desktopmenu{
@@ -212,6 +217,10 @@ video{
   text-decoration: none;
   margin: 0 auto;
 }
+#show_location {
+    font-size: 20px;
+
+}
 /* ABOUT */
 
 .about_container {
@@ -258,6 +267,10 @@ video{
     letter-spacing: 0.3px;
     text-decoration: none;
 
+}
+
+#id_news_post {
+    text-decoration: none;
 }
 @media screen and (max-width:600px ) {
     .news_container {
@@ -411,3 +424,9 @@ input::placeholder, textarea::placeholder {
 }
 
 /* SPOTIFY */
+.fa-spotify {
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    color: white;
+}
