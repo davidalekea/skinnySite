@@ -79,10 +79,7 @@ function displayNews(singleNews) {
 
     let newsClone = newsTemplate.cloneNode(true);
     newsClone.querySelector("#id_news_post").href = "?id=" + singleNews.id+ "/news";
-    let dateRaw = singleNews.acf.date;
-    let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
-    newsClone.querySelector("#news_date").textContent = dateChar;
-    newsClone.querySelector("#news_title").textContent = singleNews.title.rendered;
+    newsClone.querySelector("#news_title").innerHTML = singleNews.title.rendered;
     var fade = "url('')";
     let urlRaw = singleNews.better_featured_image.media_details.sizes.thumbnail.source_url;
     let urlNew = fade.slice(0, 5) + urlRaw + fade.slice(5);
@@ -111,14 +108,14 @@ getNews();
 getVideos();
 
 function openNewsModal(uniqueId) {
-
+    console.log(uniqueId);
     document.getElementById('myModal').style.display = "block";
     let dateRaw = uniqueId.acf.date;
     let dateChar = dateRaw.slice(0, 4)+ "/"+ dateRaw.slice(4, 6)+"/"+dateRaw.slice(6, 8);
     document.querySelector("#news_date_modal").textContent = dateChar;
     document.querySelector("#news_title_modal").textContent = uniqueId.title.rendered;
     document.querySelector("#news_p").innerHTML = uniqueId.content.rendered;
-    document.querySelector("#news_modal_img").src = uniqueId.better_featured_image.media_details.sizes.large.source_url;
+    document.querySelector("#news_modal_img").src = uniqueId.better_featured_image.media_details.sizes.medium.source_url;
 
 }
 

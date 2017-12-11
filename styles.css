@@ -118,6 +118,7 @@ span {
 }
 .news_trigger {
     display: grid;
+    margin-top: -300px;
 }
 
 
@@ -262,9 +263,9 @@ video{
 }
 
 .single_news_wrapper span  {
-    font-size: 20px;
-    font-family: BEBA;
-    font-weight: lighter;
+    font-size: 22px;
+    font-family: helvetica neue;
+    font-weight: 300;
     letter-spacing: 0.3px;
     text-decoration: none;
 
