@@ -430,3 +430,6 @@ input::placeholder, textarea::placeholder {
     right: 20px;
     color: white;
 }
+#spotify_player {
+    display: none;
+}

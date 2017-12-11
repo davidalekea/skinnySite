@@ -19,7 +19,6 @@ $(".fa-arrow-down").click(function() {
 */
 //Init hide
 $(".fa-spotify").hide();
-$("#spotify_player").hide();
 
 
  document.body.addEventListener('scroll', function () {
@@ -39,4 +38,16 @@ $(".fa-arrow-down").click(function() {
     $('html,body').animate({
         scrollTop: $(".shows").offset().top},
         'slow');
+});
+
+document.querySelector(".fa-spotify").addEventListener("click",function() {
+    var player = document.querySelector("#spotify_player");
+    if (player.style.display ==="none") {
+        player.style.display = "block";
+        document.querySelector(".fa-spotify").style.bottom = "80px";
+    }
+    else {
+        player.style.display = "none";
+        document.querySelector(".fa-spotify").style.bottom = "0";
+    }
 });
