@@ -34,7 +34,7 @@ $(".fa-spotify").hide();
 
      }
  });
-$(".fa-arrow-down").click(function() {
+$(".fa-arrow-down, .events_point ").click(function() {
     $('html,body').animate({
         scrollTop: $(".shows").offset().top},
         'slow');
