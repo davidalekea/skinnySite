@@ -265,7 +265,7 @@ video{
 .single_news_wrapper span  {
     font-size: 22px;
     font-family: helvetica neue;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.3px;
     text-decoration: none;
 
@@ -426,11 +426,11 @@ input::placeholder, textarea::placeholder {
 }
 
 /* SPOTIFY */
-.fa-spotify {
+.fa-play-circle {
     position: fixed;
     bottom: 0;
     right: 20px;
-    color: white;
+    color: #6AE368;
 }
 #spotify_player {
     display: none;
