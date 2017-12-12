@@ -46,7 +46,7 @@ display: flex;
     font-size: 22px;
 }
 
-.menupoints li:hover{
+.menupoints li:hover, .menupoints li:focus{
     cursor: pointer;
     text-decoration: underline;
     text-decoration-color: #F9C700;

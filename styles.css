@@ -106,7 +106,7 @@ span {
     margin-left: 5%;
 }
 
-.overlay-content a:hover{
+.overlay-content a:hover, .overlay a:focus{
     text-decoration: underline;
     text-decoration-color: #F9C700;
 }
