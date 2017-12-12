@@ -33,9 +33,12 @@
 }
 
 .menupoints {
+display: flex;
+    justify-content: space-around;
     font-family: 'BEBA';
     margin-top: auto;
     margin-bottom: auto;
+    width: 53%;
     }
 
 .menupoints li{
@@ -43,7 +46,8 @@
     font-size: 22px;
 }
 
-.menupoints a:hover{
+.menupoints li:hover{
+    cursor: pointer;
     text-decoration: underline;
     text-decoration-color: #F9C700;
 }
@@ -58,10 +62,17 @@
 }
 
 .socialicons a:hover {
+    cursor: pointer;
     color: #F9C700;
 }
 
+.burgermenu{
+        display: none;
+    }
 
+    .burgernavheader {
+        display: none;
+    }
 /* MODAL */
 
 /* LANDING */

@@ -7,6 +7,10 @@
       .extend {
     height: auto;
 }
+
+    h1{
+        font-size: 2.8em;
+    }
 /* MENU */
 .desktopmenu{
     display: none;

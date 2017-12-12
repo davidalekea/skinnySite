@@ -9,10 +9,21 @@
     .svg_container {
         margin-top: 0;
     }
+
+    h1{
+        font-size: 2em;
+    }
 /* MENU */
 .desktopmenu{
     display: none;
 }
+  .overlay a {font-size: 30px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+
 
 /* MODAL */
 #news_p {

@@ -14,7 +14,7 @@ html {
 }
 
 h1 {
-    font-family: Beba;
+    font-family: 'Beba';
     letter-spacing: 0.3px;
     text-align: center;
     font-size: 60px;
@@ -51,6 +51,8 @@ section {
 span {
     text-decoration: none;
     color: #EFEFEF;
+    margin-top: auto;
+    margin-bottom: auto;
 
 }
 
@@ -76,6 +78,94 @@ span {
     display: none;
 }
 
+.socialmobil {
+    display: flex;
+
+}
+
+.overlay {
+    font-family: 'Beba';
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.overlay-content a:hover{
+    text-decoration: underline;
+    text-decoration-color: #F9C700;
+}
+
+.overlay a {
+    padding-top: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: flex;
+    flex-direction: column;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+.burgernavheader {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(8, 9, 9, 1);
+    overflow: hidden;
+    height: 3em;
+    text-align: right;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+#burger {
+    color: #F9C700;
+    margin-right: 1em;
+}
+
+.overlay-social {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 0;
+}
+
+
+.overlay-social li{
+    display: inline-flex;
+    align-self: flex-end;
+    text-decoration: none;
+}
+
+.overlay-social a:hover{
+    color: #F9C700;
+    cursor: pointer;
+}
 
 /* MODAL */
 
@@ -209,13 +299,11 @@ video{
 }
 #show_ticket_link {
   border-radius: 10px;
-  font-family: Beba;
+  font-family: 'Beba';
   color: #000000;
   font-size: 20px;
   background: #F9C700;
   padding: 10px 20px 10px 20px;
-  width: 65px;
-  max-height: 20px;
   text-decoration: none;
   margin: 0 auto;
 }
@@ -264,7 +352,7 @@ video{
 
 .single_news_wrapper span  {
     font-size: 22px;
-    font-family: helvetica neue;
+    font-family: 'HelveticaNeue';
     font-weight: 500;
     letter-spacing: 0.3px;
     text-decoration: none;
@@ -282,6 +370,8 @@ video{
     }
     .single_news_wrapper {
         width: 60vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -291,6 +381,7 @@ video{
     }
     .single_news_wrapper {
         width: 30vw;
+
     }
 }
 

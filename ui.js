@@ -1,3 +1,13 @@
+/*Mobile Navigation*/
+
+function openNav() {
+    document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+}
+
 
 //Init hide
 $(".fa-play-circle").hide();
