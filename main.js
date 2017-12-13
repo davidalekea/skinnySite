@@ -1,5 +1,8 @@
 /* Fetch & Display Shows,News, Videos Coming Up */
 
+
+
+/*Fetchers script */
 function getShows() {
     fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/shows?_embed")
         .then(function (response) {
@@ -44,7 +47,7 @@ function getSingleVideosById(myId) {
         })
         .then(openVideosModal);
 }
-
+/*Dividers for each function */
 
 function deployShows(json) {
     json.forEach(displayShows);
@@ -58,6 +61,7 @@ function deployVideos(json) {
     json.forEach(displayVideos);
 }
 
+/*Display function */
 function displayShows(singleShow) {
 
     let showsContainer = document.querySelector(".shows_container");
@@ -107,6 +111,8 @@ getShows();
 getNews();
 getVideos();
 
+/*MODAL display*/
+
 function openNewsModal(uniqueId) {
     console.log(uniqueId);
     document.getElementById('myModal').style.display = "block";
@@ -120,18 +126,7 @@ function openNewsModal(uniqueId) {
 }
 
 function openVideosModal(uniqueId) {
-    document.onreadystatechange = function () {
-  var state = document.readyState;
-  if (state == 'interactive') {
-      document.querySelector('#load').style.display = "block"; document.querySelector('#video_id').style.visibility="hidden";
-  } else if (state == 'complete') {
-      setTimeout(function(){
-         document.getElementById('interactive');
-         document.getElementById('load').style.visibility="hidden";
-         document.querySelector('video_id').style.visibility="visible";
-      },1000);
-  }
-}
+
     console.log(uniqueId);
     document.getElementById('myModal').style.display = "block";
     document.querySelector(".news_trigger").style.display = "none";
@@ -142,6 +137,8 @@ function openVideosModal(uniqueId) {
     document.querySelector(".modal-content").appendChild(divVideo);
 
 }
+
+/* URL RESEARCH KEYWORDS */
 
 let searchParams = new URLSearchParams(window.location.search);
 let line = searchParams.toString("id");

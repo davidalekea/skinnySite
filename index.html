@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skinny Skinz Site</title>
+    <!-- Link CSS file-->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="tiny.css">
     <link rel="stylesheet" href="small.css">
@@ -12,10 +13,11 @@
     <link rel="stylesheet" href="medium.css">
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
-      <!-- or -->
+      <!-- CSS Animation library-->
       <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
         <style>
+
       @font-face { font-family: Beba; src: url('fonts/BEBAS.ttf'); }
       @font-face { font-family: HelveticaNeue; src: url('fonts/HelveticaNeue Light.ttf'); }
 
@@ -23,6 +25,7 @@
 </head>
 
 <body>
+    <!--DESKTOP MENU-->
     <nav class="desktopmenu under">
         <ul class="menupoints">
             <li class="events_point">Shows</li>
@@ -39,7 +42,7 @@
             <li><a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
         </ul>
     </nav>
-
+    <!--BURGER MENU-->
     <div class="burgermenu">
         <div id="myNav" class="overlay">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -61,12 +64,14 @@
             </div>
         </div>
     </div>
+
         <div class="burgernavheader">
             <span id="burger" style="font-size:34px;cursor:pointer" onclick="openNav()">&#9776;</span>
         </div>
-
+    <!--SPOTIFY PLAYER-->
     <iframe id="spotify_player" src="https://open.spotify.com/embed/track/6Omw4zPzvhgWR1fcKKNUuN" width="100%" height="80" frameborder="0" allowtransparency="true"></iframe>
     <i class="fa fa-play-circle fa-2x" aria-hidden="true"></i>
+    <!--LANDING-->
     <section class="landing">
         <div class="video-container">
   <video autoplay poster="" class="video-parallax" loop muted>
@@ -82,13 +87,16 @@
 
 
     </section>
+    <!--MAIN PAGE-->
     <main>
+        <!--SHOW PAGE-->
         <div class="compartement shows extend">
             <h1 class="show_header">Catch Me In...</h1>
 
             <div class="shows_container">
             </div>
         </div>
+        <!--ABOUT PAGE-->
         <div class="compartement about">
             <h1>Me Myself & I</h1>
             <div class="about_container">
@@ -98,17 +106,20 @@ We all have our ups and downs but right now its time to make grind like never be
                 </p>
             </div>
         </div>
+        <!--NEWS PAGE-->
         <div class="compartement extend news">
             <h1>News</h1>
             <div class="news_container">
 
             </div>
         </div>
+        <!--VIDEO PAGE-->
         <div class="compartement extend video">
             <h1>Visuals</h1>
             <div class="video_container">
             </div>
         </div>
+        <!--BOOKME PAGE-->
         <div class="compartement bookme">
             <h1>Come Get Me</h1>
             <h2>I'm available for bookings for live shows and parties. Get in touch!</h2>
@@ -126,7 +137,7 @@ We all have our ups and downs but right now its time to make grind like never be
         </div>
 
     </main>
-
+    <!--TEMPLATE TAGS-->
     <template id="showsTemplate">
             <div class="single_show_wrapper">
                 <span id="show_date"></span>
@@ -153,7 +164,7 @@ We all have our ups and downs but right now its time to make grind like never be
             </div>
         </a>
     </template>
-
+    <!--DYNAMIC MODAL-->
     <div id="myModal" class="modal">
 
         <div class="modal-content">
@@ -167,12 +178,11 @@ We all have our ups and downs but right now its time to make grind like never be
             </div>
         </div>
 
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
-        <script src="https://use.fontawesome.com/cfb128ec89.js"></script>
-        <script src="main.js"></script>
-        <script src="ui.js"></script>
+        <!--SCRIPTS-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> <!--JQUERY Used for some animation on events-->
+        <script src="https://use.fontawesome.com/cfb128ec89.js"></script><!--External library for icons-->
+        <script src="main.js"></script><!--Dynamic Data fetching WP script-->
+        <script src="ui.js"></script><!--UserInterfacescript in Jquery(animations,..)-->
 
 </body>
 
