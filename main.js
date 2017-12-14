@@ -4,7 +4,7 @@
 
 /*Fetchers script */
 function getShows() {
-    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/shows?_embed")
+    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/shows?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -12,7 +12,7 @@ function getShows() {
 }
 
 function getNews() {
-    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news?_embed")
+    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -21,7 +21,7 @@ function getNews() {
 
 function getVideos() {
 
-    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/videos?_embed")
+    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/videos?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -30,7 +30,7 @@ function getVideos() {
 
 function getSingleNewsById(myId) {
     console.log(myId);
-        fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news/" + myId + "?_embed")
+        fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news/" + myId + "?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -41,7 +41,7 @@ function getSingleNewsById(myId) {
 
 function getSingleVideosById(myId) {
     console.log(myId);
-    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/videos/" + myId + "?_embed")
+    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/videos/" + myId + "?_embed")
         .then(function (response) {
             return response.json()
         })
