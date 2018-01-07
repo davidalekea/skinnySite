@@ -1,5 +1,4 @@
 /* Fetch & Display Shows,News, Videos Coming Up */
-
 function getShows() {
     fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/shows?_embed")
         .then(function (response) {
