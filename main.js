@@ -1,13 +1,10 @@
 /* Fetch & Display Shows,News, Videos Coming Up */
-<<<<<<< HEAD
-=======
 
 
 
 /*Fetchers script */
->>>>>>> origin/master
 function getShows() {
-    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/shows?_embed")
+    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/shows?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -15,7 +12,7 @@ function getShows() {
 }
 
 function getNews() {
-    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news?_embed")
+    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -24,7 +21,7 @@ function getNews() {
 
 function getVideos() {
 
-    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/videos?_embed")
+    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/videos?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -33,7 +30,7 @@ function getVideos() {
 
 function getSingleNewsById(myId) {
     console.log(myId);
-        fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news/" + myId + "?_embed")
+        fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/create_news/" + myId + "?_embed")
         .then(function (response) {
             return response.json()
         })
@@ -44,14 +41,15 @@ function getSingleNewsById(myId) {
 
 function getSingleVideosById(myId) {
     console.log(myId);
-    fetch("https://digitartpzm.dk/wordpress/wp-json/wp/v2/videos/" + myId + "?_embed")
+    fetch("http://digitartpzm.dk/wordpress/wp-json/wp/v2/videos/" + myId + "?_embed")
         .then(function (response) {
             return response.json()
         })
         .then(openVideosModal);
 }
-/*Dividers for each function */
 
+
+/*Dividers for each function */
 function deployShows(json) {
     json.forEach(displayShows);
 }
@@ -114,8 +112,8 @@ getShows();
 getNews();
 getVideos();
 
-/*MODAL display*/
 
+/*MODAL display*/
 function openNewsModal(uniqueId) {
     console.log(uniqueId);
     document.getElementById('myModal').style.display = "block";
@@ -129,7 +127,18 @@ function openNewsModal(uniqueId) {
 }
 
 function openVideosModal(uniqueId) {
-
+    document.onreadystatechange = function () {
+  var state = document.readyState;
+  if (state == 'interactive') {
+      document.querySelector('#load').style.display = "block"; document.querySelector('#video_id').style.visibility="hidden";
+  } else if (state == 'complete') {
+      setTimeout(function(){
+         document.getElementById('interactive');
+         document.getElementById('load').style.visibility="hidden";
+         document.querySelector('video_id').style.visibility="visible";
+      },1000);
+  }
+}
     console.log(uniqueId);
     document.getElementById('myModal').style.display = "block";
     document.querySelector(".news_trigger").style.display = "none";
@@ -142,7 +151,6 @@ function openVideosModal(uniqueId) {
 }
 
 /* URL RESEARCH KEYWORDS */
-
 let searchParams = new URLSearchParams(window.location.search);
 let line = searchParams.toString("id");
 let id = line.slice(3,6);
