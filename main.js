@@ -169,4 +169,7 @@ if(window.location.href.indexOf("news") > -1 && id) {
 
 document.querySelector(".close").addEventListener("click", function () {
     document.getElementById('myModal').style.display = "none";
+    let url = window.location.href;
+    let res = url.split("?");
+    window.history.pushState({title:document.title,"URL":res[0]}, document.title, res[0]);
 });

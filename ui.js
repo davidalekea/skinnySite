@@ -30,28 +30,28 @@ $(".fa-play-circle").hide();
 /*Animation menu */
 $(".fa-arrow-down, .events_point ").click(function() {
     $('html,body').animate({
-        scrollTop: $(".shows").offset().top},
+        scrollTop: (document.body.scrollTop + $(".shows").offset().top)},
         'slow');
 });
 $(".about_point ").click(function() {
     $('html,body').animate({
-        scrollTop: $(".about").offset().top},
+        scrollTop: (document.body.scrollTop + $(".about").offset().top)},
         'slow');
 });
 
 $(".news_point ").click(function() {
     $('html,body').animate({
-        scrollTop: $(".news").offset().top},
+        scrollTop: (document.body.scrollTop + $(".news").offset().top)},
         'slow');
 });
 $(".video_point ").click(function() {
     $('html,body').animate({
-        scrollTop: $(".video").offset().top},
+        scrollTop: (document.body.scrollTop + $(".video").offset().top)},
         'slow');
 });
 $(".book_point ").click(function() {
     $('html,body').animate({
-        scrollTop: $(".bookme").offset().top},
+        scrollTop: (document.body.scrollTop + $(".bookme").offset().top)},
         'slow');
 });
 
