@@ -76,7 +76,9 @@ display: flex;
 /* MODAL */
 
 /* LANDING */
+.fa-arrow-down {
 
+}
 
 /*SHOWS*/
     .single_show_wrapper {
@@ -88,18 +90,19 @@ display: flex;
         grid-template-columns: 50% 50%;
     }
     #about_description {
-        width: 40vw;
+        width: 43vw;
         margin: 0 auto;
-        padding-top: 100px;
         line-height: 1.8;
 
     }
     #about_img {
-        height: 330px;
+        height: 38vw;
+        max-height: 460px;
         position: relative;
         left: 10%;
     }
 /* VIDEOS */
+
 
 
 /* BOOKME */

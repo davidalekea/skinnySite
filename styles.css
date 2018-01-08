@@ -19,6 +19,7 @@ h1 {
     text-align: center;
     font-size: 60px;
     font-weight: lighter;
+    word-spacing: .3em;
 }
 h2 {
 
@@ -52,8 +53,11 @@ span {
     text-decoration: none;
     color: #EFEFEF;
     margin-top: auto;
-    margin-bottom: auto;
 
+}
+
+.spotifyclass{
+    z-index: 1;
 }
 
 #spotify_player {
@@ -198,30 +202,41 @@ span {
 
 .modal-content {
     background-color: #080909;
-    border: 1px solid #888;
+    border: 0px solid #888;
     width: 100%;
     height: 100%;
     margin: 0 auto;
     display: grid;
     text-align: center;
-
+    justify-content: space-around;
+    align-content: space-around;
 }
+
+modal-content span {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .news_trigger {
     display: grid;
-    margin-top: -300px;
 }
 
 
 .close {
     color: #DD3A23;
     float: right;
-    font-size: 28px;
+    font-size: 50px;
     font-weight: bold;
+    z-index: 1;
+    width: 30px;
+    position: absolute;
+    left: 93%;
+    top: 4%;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
+    color: #F9C700;
     text-decoration: none;
     cursor: pointer;
 }
@@ -237,7 +252,7 @@ span {
 
 #news_modal_img {
     max-height: 200px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 #news_p {
     width: 50vw;
@@ -253,13 +268,10 @@ span {
     height: 100vw;
 }
 video{
-    position: absolute;
-    min-width: 100%;
-    min-height: 100%;
-    top: 0%;
+    position: fixed;
+    top: 50%;
     left: 50%;
-    width: auto;
-    height: 100vh;
+    height: 58vh;
     -webkit-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
     -moz-transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
     transform: translateX(-50%) translateY(-50%) translateZ(-1px) scale(2);
@@ -273,7 +285,7 @@ video{
 }
 .fa-arrow-down {
     color: #F9C700;
-    margin-top: 20vh;
+    margin-top: 10vw;
     max-height: 20px;
 }
 
@@ -307,6 +319,11 @@ video{
   text-decoration: none;
   margin: 0 auto;
 }
+
+#show_ticket_link:hover {
+    background: #fdff03;
+}
+
 #show_location {
     font-size: 20px;
 
@@ -356,7 +373,18 @@ video{
     font-weight: 500;
     letter-spacing: 0.3px;
     text-decoration: none;
+    background-color: black;
+    min-height: 56px;
+    max-height: 102px;
+    text-align: center;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 
+.single_news_wrapper span:hover{
+    color: #F9C700;
 }
 
 #id_news_post {
@@ -386,6 +414,10 @@ video{
 }
 
 /* VIDEOS */
+.video {
+    margin-top: 100px;
+}
+
 .video_container {
     display: grid;
     width: 100vw;
@@ -413,6 +445,11 @@ video{
     bottom: 50%;
     text-align: center;
 }
+
+#video_title:hover{
+    color: #F9C700;
+}
+
 #video_id {
     text-decoration: none;
 }
@@ -517,10 +554,12 @@ input::placeholder, textarea::placeholder {
 }
 
 /* SPOTIFY */
+
 .fa-play-circle {
     position: fixed;
-    bottom: 0;
-    right: 20px;
+    bottom: 20px;
+    left: 20px;
+    font-size: 3em;
     color: #6AE368;
 }
 #spotify_player {
